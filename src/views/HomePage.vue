@@ -2,7 +2,7 @@
   <div class="home-container">
     <h1>Home Page</h1>
     <p>Hello {{ userData }} đẹp trai</p>
-    <img :src="imageSource" alt="facebook image"/>
+    <img :src="imageSource" alt="facebook image" />
   </div>
 </template>
 
@@ -16,8 +16,10 @@ export default {
     const userData = ref('');
     const imageSource = ref('');
 
+    const appAccessToken = '567880838213220|xfgFJSZTeyIXXrgw1JPuQAVnZ58';
+
     const buildUrlFbInspectToken = (token) =>
-      `https://graph.facebook.com/v14.0/debug_token?input_token=${token}&access_token=${token}`;
+      `https://graph.facebook.com/v14.0/debug_token?input_token=${token}&access_token=${appAccessToken}`;
 
     const buildUrlFbMe = (FB_ID_PERSON, token) =>
       `https://graph.facebook.com/v14.0/${FB_ID_PERSON}?fields=id,name,picture,email&access_token=${token}`;
