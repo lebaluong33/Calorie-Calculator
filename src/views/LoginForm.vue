@@ -36,7 +36,8 @@ export default {
 
     const buildURL = () => {
       let params = 'fbloged=1';
-      let uriEncoded = encodeURIComponent(window.location.origin+"/login-success");
+      const redirectUri = window.location.origin+"/login-success";
+      let uriEncoded = encodeURIComponent(redirectUri);
       return `https://www.facebook.com/v14.0/dialog/oauth?client_id=${appId}&redirect_uri=${uriEncoded}&state=${params}&response_type=code%20token`;
     };
 
