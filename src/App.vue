@@ -1,17 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <LoginForm msg="Welcome to Your Vue.js App"/>
+  <div id="nav">
+    <router-link to="/">LoginForm</router-link> |
+    <router-link to="/home">Home Page</router-link>
+    <router-view />
+  </div>
 </template>
 
 <script>
-import LoginForm from './components/LoginForm.vue'
-
 export default {
   name: 'App',
-  components: {
-    LoginForm
-  }
-}
+};
 </script>
 
 <style>
